@@ -3,7 +3,7 @@ const fetchingApi = () => {
       .then((response) => response.json())
       .catch((error) => {
         console.error("Error:", error);
-        return []; // Devolver un array vacío en caso de error para manejarlo en el componente
+        return []; 
       });
   };
   

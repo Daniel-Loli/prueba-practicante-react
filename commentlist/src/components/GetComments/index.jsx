@@ -4,9 +4,8 @@ import AddBtn from "./AddBtn";
 
 const GetComments = () => {
   const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState(""); // Estado para almacenar el nuevo comentario
+  const [newComment, setNewComment] = useState(""); 
 
-  // Cargar comentarios desde localStorage al montar el componente
   useEffect(() => {
     const savedComments = localStorage.getItem("comments");
     if (savedComments) {
@@ -20,10 +19,8 @@ const GetComments = () => {
 
 
   const handleSubmit = (comment) => {
-    // Agregar el nuevo comentario al estado de comentarios
     const updatedComments = [...comments, { id: comments.length + 1, body: comment }];
     setComments(updatedComments);
-    // Guardar los comentarios en localStorage
     localStorage.setItem("comments", JSON.stringify(updatedComments));
   };
 
