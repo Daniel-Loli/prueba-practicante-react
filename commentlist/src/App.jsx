@@ -1,12 +1,21 @@
-import GetComments from "./components/GetComments"
-import Header from "./components/Header"
+import { useRoutes} from "react-router-dom"
+import Home from "./pages/Home"
+
+const AppRoutes=()=>{
+  let routes=useRoutes([
+    {
+      path:"/",
+      element:<Home/>
+    },
+  ])
+  return routes
+}
 
 const App = () => {
   return (
-    <>
-      <Header/>
-      <GetComments/>
-    </>
+    <div className="my-0 mx-0 p-0">
+      <AppRoutes/>
+    </div>
   )
 }
 
