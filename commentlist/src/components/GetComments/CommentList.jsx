@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import CommentItem from "./CommentItem";
+import CommentItem from "./CommentIItem";
 
 const CommentList = ({ comments }) => (
   <section>
